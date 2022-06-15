@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'bases';
+  titulo: string = 'Bases de Angular';
+
+  numero: number =10;
+
+  acumular(valor:number){
+    this.numero += valor; //+= es un operador de typescript para sumar
+  }
+
+
 }
