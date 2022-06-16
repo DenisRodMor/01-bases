@@ -1,8 +1,14 @@
 <p>listado de Héroes!</p>
 
-<div *ngIf="heroeBorrado !== ''"> <!--Si heroeBorrado es diferente a un string vacio entonces se va a mostrar-->
+<div *ngIf="heroeBorrado; else noBorrado"> <!--Si la condicion no se cumple que muestre el template con el mensaje de abajo-->
   <h3>Héroe Borrado:  <small>{{heroeBorrado}}</small> </h3>
 </div>
+
+<<ng-template #noBorrado>
+  <h3>No ha borrado nada aún </h3>
+</ng-template>
+
+
 
   <button (click)="borrarHeroe()">
     Borrar
