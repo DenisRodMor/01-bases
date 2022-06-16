@@ -1,9 +1,8 @@
 <p>listado de Héroes!</p>
 
-<div>
-  <h3>Héroe Borrado</h3>
-  <span>{{heroeBorrado}}</span>
-  </div>
+<div *ngIf="heroeBorrado !== ''"> <!--Si heroeBorrado es diferente a un string vacio entonces se va a mostrar-->
+  <h3>Héroe Borrado:  <small>{{heroeBorrado}}</small> </h3>
+</div>
 
   <button (click)="borrarHeroe()">
     Borrar
