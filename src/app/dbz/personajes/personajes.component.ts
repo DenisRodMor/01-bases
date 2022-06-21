@@ -8,7 +8,11 @@ import { DbzService } from '../services/dbz.service';
 })
 export class PersonajesComponent {
 
-  @Input()  personajes: Personaje []=[];
+//@Input()  personajes: Personaje []=[];
+
+get personajes(){
+  return this.dbzservice.personajes; //el personajes es el get que tenemos en el servicio
+}
 
   constructor(public dbzservice: DbzService){
 
